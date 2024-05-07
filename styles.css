@@ -1,0 +1,94 @@
+:root {
+    --bg-color: #333;
+    --btn-bg-color: #444;
+    --btn-op-color: #6c63ff;
+    --btn-hover: #555;
+    --btn-op-hover: #8a85ff;
+    --btn-op-equal: #25f352;
+  }
+  
+  body {
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+
+  .heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-weight: 900;
+    font-size: xx-large;
+  }
+  
+  .calculator {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    background-color: var(--bg-color);
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    /* width: auto; */
+  }
+  
+  .display {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: right;
+    font-size: 2em; 
+    border-bottom: 2px solid #555;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    font-family: 'Orbitron'
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+  }
+  
+  .btn {
+    background-color: var(--btn-bg-color);
+    color: #fff;
+    border: none;
+    padding: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 1px;
+  }
+
+  .ripple {
+    background-position: center;
+    transition: background 0.3s;
+  }
+  .ripple:hover {
+    background: #555758 radial-gradient(circle, transparent 1%, #494d50 1%) center/15000%;
+  }
+  .ripple:active {
+    background-color: inherit;
+    background-size: 100%;
+    transition: background 0s;
+  }
+  
+  .btn.operator {
+    background-color: var(--btn-op-color);
+  }
+
+  #equal{
+    background-color: var(--btn-op-equal);
+    grid-column: 3 / 5;
+  }
+  
+  .btn:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  .btn.operator:hover {
+    background-color: var(--btn-op-hover);
+  }
+  
