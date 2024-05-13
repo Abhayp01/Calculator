@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
     --bg-color: #333;
     --btn-bg-color: #444;
@@ -9,7 +11,9 @@
   
   body {
     height: 100vh;
-    background-color: #f0f0f0;
+    background-color: rgba(186, 190, 188, 0.692);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     margin: 0;
   }
 
@@ -17,9 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Helvetica;
+    font-family: "Roboto";
     font-weight: 900;
     font-size: xx-large;
+    color: rgb(72, 140, 204);
   }
   
   .calculator {
@@ -52,11 +57,14 @@
   }
   
   .btn {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size:1.5rem;
     background-color: var(--btn-bg-color);
     color: #fff;
     border: none;
     padding: 20px;
-    font-size: 1.5em;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 1px;
@@ -92,3 +100,39 @@
     background-color: var(--btn-op-hover);
   }
   
+  @media (max-width: 908px) {
+    .heading {
+        font-size: x-large; /* Adjust font size for smaller screens */
+    }
+    .calculator{
+      width: 50%;
+    }
+
+    .display {
+        font-size: 1em; /* Make the display text smaller to fit the device */
+    }
+
+    .btn {
+        font-size: 1rem; /* Decrease the button font size for better fit */
+        padding: 12px; /* Adjust padding to maintain button usability */
+    }
+}
+
+@media (max-width: 508px) {
+  .heading {
+      font-size: x-large; /* Adjust font size for smaller screens */
+  }
+  .calculator{
+    width: 60%;
+  }
+
+  .display {
+      font-size: 1em; /* Make the display text smaller to fit the device */
+  }
+
+  .btn {
+    width: a;
+      font-size: 1rem; /* Decrease the button font size for better fit */
+      padding: 12px; /* Adjust padding to maintain button usability */
+  }
+}
